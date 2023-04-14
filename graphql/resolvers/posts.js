@@ -11,16 +11,16 @@ module.exports = {
             }
 
         },
-        async getPost(_, {postID} ){
+        async getPost(_, {postId} ){
             try{
-               const post = await Post.findById(postID);
+               const post = await Post.findById(postId);
                if(post){
                 return post;
                } else{
                 throw new Error('Post not found');
                }
-            } catch(err){]
-            throw New Error(err);
+            } catch(err){
+            throw new Error(err);
             }
         }
     }
